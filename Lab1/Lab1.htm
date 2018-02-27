@@ -1,0 +1,137 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Lab #1</title>
+        <meta name="title" content="Lab #1">
+        <meta name="description" content"The personal page of Brandon James">
+        <meta name="author" content="Brandon James">
+        <meta name="keywords" content="dog, computer, Downs, reddit, bbc">
+
+    </head>
+    <script>
+        function helloUser(){
+            var firstName = prompt("What is your first name?");
+            var lastName = prompt("What is your last name?");
+            alert("Hello " + lastName + ", " + firstName + "! Welcome to ITK353");
+        }
+    
+    </script>
+    <h1>Brandon James</h1>
+    <table class="jumplinks" cellspacing="10">
+        <tr>
+            <td>
+                <a href="#personaldet">Details</a>
+            </td>
+            <td>
+                <a href="#qna">Q&amp;A</a>
+            </td>
+            <td>
+                <a href="#intarticles">Interesting Articles</a>
+            </td>
+        </tr>
+
+    </table><br>
+    <div class="container">
+    <body bgcolor="#D3D3D3">
+        
+        
+        <div class="caption">
+            <img id="dogchase" src="chasetail.gif" width="250">
+            <div><center><br>My girlfriend and I's dog, Minnie.
+                </center></div>
+            
+        </div>
+        
+        <img id="personalpic" src="me.jpg" alt="Picture of me" width=300 />
+        <h2 id="personaldet">Details about me:</h2>
+        <div class="personaldet" >
+            <p>
+            <b>Email:</b>
+            <a href="mailto:bmjame1@ilstu.edu">bmjame1@ilstu.edu</a>
+            <br>
+            <b>Hometown: </b>Downs, IL
+            <br>
+            <b>Major: </b>Computer Science
+            <br>
+            <b>Graduating: </b>May 2019</p>
+        </div>
+
+        <h2>My Favorite Sites: </h2>
+        <div class="det">
+            <ol>
+                <li>
+                    <a href="http://www.reddit.com">www.reddit.com</a>
+                </li>
+                <li>
+                    <a href="http://www.bbc.com/news/world/us_and_canada/">www.bbc.com</a>
+                </li>
+                <li>
+                    <a href="http://www.gm-volt.com">www.gm-volt.com</a>
+                </li>
+            </ol>
+        </div>
+
+        
+        <h2>My Hobbies</h2>
+        <div class="det">
+            <ul>
+                <li>Basketball &amp; Volleyball</li>
+                <li>Playing with my dog</li>
+                <li>Hiking/Camping</li>
+                <li>Movies</li>
+                <li width=100px>Clean energy &amp; electric vehicles</li>
+            </ul>
+            <br>
+            <form>
+                <input id="hellobutton" type="button" value="Hello there!" onClick="helloUser()">
+            </form>
+        </div>
+        <br>
+        <hr><br>
+        <h2 id="qna">Q&amp;A</h2>
+        <div class="det">
+            <ol>
+              <li>
+                    Do you have any Java experience? If so, from what course(s)?
+                    <pre>Of course! I have Java experience from IT168, IT179, IT226, IT279, and IT327. Expanded below, I was a back end web developer for Discover Financial Services, where I worked primarily with Java and worked on web applicaitons.</pre>
+                    
+              </li>
+              <li>
+                    Do you have any Database experience? (Used MS Access? Oracle? Comfortable with SQL?) If so, from what course(s)?
+                    <pre>I am taking IT378 concurrently. I'm excited to be a part of both IT353 and IT378, because I can tie together a lot of knowledge to become a better web developer for my team this summer. In a previous job in high school, I worked with an MS Access DB. Interestingly enough, my small school of 300+ kids was using a rather insecure DB to contain all the usernames and passwords of the students and faculty. Learned a great deal though. </pre>
+                    
+              </li>
+              <li>
+                    Do you have any Web development experience? (Built any pages? Used any web development technologies before? etc.) If so, from what course(s)?
+              </li>
+                   <pre>I do have some Web development experience. I spent last summer at Discover Financial Services as a back end web developer. Though mainly I worked on back end security validation, I worked with Restful web services, and learned about the MVC pattern. I spent a lot of time learning to use IBM Websphere, the application server hosting the services. I'm really hoping to become more comfortable and capable in web development, so I very much look forward to this class.</pre>
+            </ol>
+        </div>
+        <br>
+        <hr><br>
+        <h2 id="intarticles">Interesting Articles</h2>
+        <div class="det">
+            <ol>
+                <li>
+                    <a href="http://www.ibm.com/developerworks/xml/library/x-mashups/index.html" rel="nofollow">Mashups: The new breed of Web app</a>
+                </li>
+                <pre>This article covers the idea of mashing two different technologies, citing similarities to music and borrowing the term where two different songs will be mashed together. This article covers many different use cases for this concept, such as Mapping, video/photo, news, and shopping mashups.
+
+This article explains that in mashups, multiple providers of content are involved, not just the core website itself. (Google maps being embedded in another site means that Google is now a content provider in that embedded site).
+
+The article explains multiple technologies that help support mashups, and the technical challenges that are involved in intergrated multiple providers in one site. Such that the mashup site must ensure that the content is consistent and usable within. The article has an important discussion on how there must be clear emphasis on security, privacy and quality for the users. 
+                </pre>
+                <li>
+                    <a href="http://www.nytimes.com/2011/02/13/business/13search.html?_r=1&amp;src=busln&amp;pagewanted=all" rel="nofollow">The Dirty Little Secrets of Search&nbsp;</a>
+                </li>
+                <pre>When internet searching and indexing exploded, there was an unbelievable amount of people and companies trying their hardest to make their site appear as the number one search result on Google. This article details an occurance where general search results seem to always point to the "J.C. Penney" store website. Though they never openly admitted it, It was discovered that "J.C. Penney" had been exploiting the Google PageRank algorithm, by having links to their store scattered across the web in completely unrelated websites. Google strongly opposes this practice, and they will punish any site by restricting the rank of their site if they are caught performing this exploit.
+
+I wrote a paper in IT279 covering the Google PageRank algorithm, how it worked, how people tried to game the algorithm unsuccessfully, and somehow missed this story of a large corporation successfully pulling it off. So instead of making it easy for people to shop online and becoming the best retailer, their hired web marketing agency cheated. Not a good look J.C. Penney.
+                </pre>
+            </ol>
+        </div>
+    </body>
+</div>
+
+</html>

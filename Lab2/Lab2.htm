@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab #2</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="lab2.js"></script>
+
+<body>
+    <h3>
+        Lab #2
+    </h3>
+
+    <div id="browserPrompt"></div>
+    <br>
+    <hr>
+    <br>
+    <p>
+        <b>Question 1</b>
+    </p>
+
+    <table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td valign="top" width="1%">
+                    <p>
+                    </p>
+                    <p>&nbsp;</p>
+                    <br>
+
+                </td>
+                <td valign="top" width="24"></td>
+                <!--msnavigation-->
+                <td valign="top">
+                    <form onsubmit="return validateForm(this)" method="GET" action="http://was6.itk.ilstu.edu:9080/itk/EchoAll">Indicate the search preference below:
+                        <p>
+                            <input type="radio" name="searchPref" value="all" id="allAirline" checked="">Search ALL airlines
+                            <br>
+                            <input type="radio" name="searchPref" id="specificAirline" value="indiv">Search for ONLY the airline(s):
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp; Choice 1:&nbsp;
+                            <input type="text" name="air1">
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp; Choice 2:&nbsp;
+                            <input type="text" name="air2">
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp; Choice 3:&nbsp;
+                            <input type="text" name="air3"> </p>
+                        <p>
+                            <input type="submit" value="Search"> </p>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <p>
+        <b>Question 2</b>
+    </p>
+    <a href="listpicker.htm">Click here to view a randomized president picker!</a>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <p>
+        <b>Question 3/4</b>
+    </p>
+    <table cellpadding='5'>
+        <tr>
+            <td>
+                <form>
+                    <select id="depSelect">
+                        <option value="default" selected>Select One</option>
+                        <option value="depA">Dept A</option>
+                        <option value="depB">Dept B</option>
+                        <option value="depC">Dept C</option>
+                    </select>
+                </form>
+            </td>
+            <td>
+                <form onsubmit="pizzaSummary(this)">
+                    <div>
+                        <select multiple size=5 id="multiTopping">
+                            <option value="cheese">Cheese</option>
+                            <option value="pep">Pepperoni</option>
+                            <option value="pineapple">Pineapple</option>
+                            <option value="mushroom">Mushroom</option>
+                            <option value="sausage">Sausage</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Submit" style="width: 86px">
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <p>
+        <b>Question 5</b>
+    </p>
+    <form name="question5">
+        User Name:
+        <input type="text" name="userName" id="userNameText">
+        <div id="userMessage"></div>
+        <br> Password:
+        <input type="password" name="password" id="passwordText">
+        <div id="passwordMessage"></div>
+    </form>
+    <br>
+    <hr>
+    <p>
+        <b>Question 6</b>
+    </p>
+    <a href="statecap.htm">Click here to view State/Capital table style toggles</a>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <form id="quizzieQuiz">
+        <table style="width: 800px;">
+            <tr>
+                <td>
+                    <h1>Quiz!</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q1">
+                        <h3>What operator will test for equality but also type equivalence? </h3>
+                        <!-- Page 251 book -->
+                        <legend>Question 1:</legend>
+                        <label for="radio-1">"==="</label>
+                        <input type="radio" name="q1" id="radio-1">
+                        <label for="radio-2">"=="</label>
+                        <input type="radio" name="q1" id="radio-2">
+                        <label for="radio-3">"="</label>
+                        <input type="radio" name="q1" id="radio-3">
+                        <label for="radio-4">"=!="</label>
+                        <input type="radio" name="q1" id="radio-4">
+                        <div id="q1Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q2">
+                        <h3>What is the term used to represent the color combination on your computer screen?</h3>
+                        <!-- Page 288 book -->
+                        <legend>Question 2:</legend>
+                        <label for="radio-5">Display Resolution</label>
+                        <input type="radio" name="q2" id="radio-5">
+                        <label for="radio-6">JPEG</label>
+                        <input type="radio" name="q2" id="radio-6">
+                        <label for="radio-7"i>RGB Color Code</label>
+                        <input type="radio" name="q2" id="radio-7">
+                        <label for="radio-8">Lossless codec</label>
+                        <input type="radio" name="q2" id="radio-8">
+                        <div id="q2Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q3">
+                        <h3>What is the purpose of 'em' in CSS?</h3>
+                        <!-- Page 100 book -->
+                        <legend>Question 3:</legend>
+                        <label for="radio-9">To make things difficult</label>
+                        <input type="radio" name="q3" id="radio-9">
+                        <br>
+                        <label for="radio-10">To provide a font-size that is in relation to the parent's font-size</label>
+                        <input type="radio" name="q3" id="radio-10">
+                        <label for="radio-11">It stands for 'extra margins', and provides additional padding to the surrounding of the element</label>
+                        <input type="radio" name="q3" id="radio-11">
+                        <label for="radio-12">It helps align the elements position in the document</label>
+                        <input type="radio" name="q3" id="radio-12">
+                        <div id="q3Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q4">
+                        <h3>'&amp;nbsp' is a type of character entity which can safely be used as a placeholder for a table cell.</h3>
+                        <!-- http://jkorpela.fi/HTML/emptycells.html -->
+                        <legend>Question 4:</legend>
+                        <select name="q4" id="q4DropDown">
+                            <option value="q4def">Please select:</option>
+                            <option value="q4True">True</option>
+                            <option value="q4False">False</option>
+                            
+                        </select>
+                        <div id="q4Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q5">
+                        <h3>It is not necessary to close a line break element.</h3>
+                        <!-- Page 78 book -->
+                        <legend>Question 5:</legend>
+                        <select name="q5" id="q5DropDown">
+                            <option value="q5def">Please select:</option>
+                            <option value="q5True">True</option>
+                            <option value="q5False">False</option>
+                            
+                        </select>
+                        <div id="q5Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q6">
+                        <h3>To define a variable in JavaScript, you must specify the variable type.</h3>
+                        <!-- Page 252 Book -->
+                        <legend>Question 6:</legend>
+                        <select name="q6" id="q6DropDown">
+                            <option value="q6def">Please select:</option>
+                            <option value="q6True">True</option>
+                            <option value="q6False">False</option>
+                            
+                        </select>
+                        <div id="q6Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q7">
+                        <h3>Please provide one of the two major types of HTTP request</h3>
+                        <!-- Page 164 book -->
+                        <legend>Question 7:</legend>
+                        <label for="fill-1"></label>
+                        <input type="text" name="q7" id="fill-1">
+                        <div id="q7Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q8">
+                        <h3>Please provide any input field type where you would provide some sort of text input</h3>
+                        <!-- Page 165 book -->
+                        <legend>Question 8:</legend>
+                        <label for="fill-2"></label>
+                        <input type="text" name="q8" id="fill-2">
+                        <div id="q8Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="q9">
+                        <h3>What keyword is a popular industry standard in which your website looks proper no matter what device
+                            it is on?</h3>
+                        <!-- https://www.w3schools.com/html/html_responsive.asp -->
+                        <legend>Question 9:</legend>
+                        <label for="fill-3"></label>
+                        <input type="text" name="q9" id="fill-3">
+                        <div id="q9Message"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="scoreQuizButton" type="button" value="Grade Quiz">
+                    <div id="scoreResults"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><br><br>
+                    <b>Quiz Screenshots</b><br>
+                    <a href="screenshot3.jpg">No Answers filled</a><br>
+                    <a href="screenshot4.jpg">Perfect quiz</a><br>
+                    <a href="screenshot5.jpg">Mixed results</a>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+    </form>
+
+    <hr>
+    <p>
+        <b>Question 8 (Development was done in Eclipse)</b>
+    </p>
+    <a href="screenshot1.jpg">Click here to see screenshot of CheckValidator.java</a>
+    <br>
+    <br>
+    <a href="screenshot2.jpg">Click here to see screenshot proof of Unit Testing</a>
+    <br>
+    <br>
+    <a href=".\Lab2\src\lab2\CheckValidator.java">Click here to direct link to CheckValidator.java</a>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.det {
+  margin: 15px;
+}
+
+.personaldet {
+  margin: 15px 25px;
+}
+
+h1 {
+  margin: 25px 0 0px 0px;
+  text-align: center;
+  font-size: 46px;
+  font-family: Georgia;
+}
+h2 {
+  margin: 5px 0 5px 15px;
+  font-size: 24px;
+  font-family: Georgia;
+}
+h3 {
+  margin-bottom: 5px;
+}
+figure {
+  display: block;
+  margin: 10px 50px 0px 0px;
+}
+dd {
+  max-width: 200px;
+}
+th{
+  text-align: center;
+  font-size: 14px;
+}
+ol,
+ul {
+  margin: 0 0 0 3px;
+}
+p {
+  margin: 3px 0px 3px 0px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 1130px;
+}
+
+input[type="button"] {
+  margin: 10px 50px 0px;
+}
+#personalpic {
+  float: right;
+  margin: 25px 115px 0px 0px;
+}
+.jumplinks {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+form {
+  display: inline-block;
+}
+.fillout {
+  text-align: center;
+}
+.wholeJSForm {
+  margin: 0 auto;
+}
+.caption {
+  float: right;
+  font-size: 13px;
+  font-style: italic;
+  margin: 80px 200px 0px 0px;
+}

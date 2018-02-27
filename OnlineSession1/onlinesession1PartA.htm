@@ -1,0 +1,59 @@
+<script src="jquery-3.3.1.min.js"></script>
+<script src="unobtrusive.js"></script>
+
+<h5>
+    This example shows how to proceed with a form submission (if a certain condition is true) or abort a submission (if a certain
+    condition is false).
+    <p>
+        For the 1st form:
+        <br> Note that when a return value of
+        <i>true</i> is given, the form is submitted. When a return value of
+        <i>false</i> is given, the submission is aborted.
+        <p>
+            For the 2nd form:
+            <br> Since the "return" keyword is omitted, the form is submitted regardless of what return value is given!
+</h5>
+<p>
+    <hr> This is with the "return" keyword on the event handler
+    <form id="one" method="get" action="http://was6.itk.ilstu.edu:9080/itk/EchoAll">
+        <INPUT TYPE="TEXT" NAME="box" VALUE="">
+        <INPUT TYPE="submit" VALUE="<-- Enter an even number here to submit the form">
+    </form>
+    <p>
+        This is WITHOUT the "return" keyword on the event handler
+        <form id="two" method="get" action="http://was6.itk.ilstu.edu:9080/itk/EchoAll">
+            <INPUT TYPE="TEXT" NAME="box" VALUE="">
+            <INPUT TYPE="submit" VALUE="<-- Enter an even number here to submit the form">
+        </form>
+
+
+    </p>
+</p>
+<br>
+<hr>
+<br>
+<form name="myForm">
+    Zipcode:
+    <input id="zipText" type="text" name="zipcode">
+    <div id="zipMessage"></div>
+    <br> Password:
+    <input id="passwordText" type="password" name="password">
+    <div id="passwordMessage"></div>
+</form>
+<br>
+<hr>
+<br>
+<p>
+    <b>Changes:</b>
+    <ul>
+        <li>
+            <a href="unobtrusive.js">External JS</a>
+        </li>
+        <li>
+            Removed all "onkeyup" and "onsubmit" actions. These are now being handled by jquery in an external JS file. The only javascript
+            references are the linking statements in the beginning of the HTML document
+        </li>
+    </ul>
+
+
+</p>

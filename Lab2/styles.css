@@ -1,0 +1,25 @@
+h3 {
+  margin: 0px;
+  margin-bottom: 7px;
+  font-weight: 400;
+}
+fieldset {
+  margin-top: 20px;
+}
+h1 {
+  margin: 0px;
+  text-align: center;
+}
+.hoverOn {
+  color: white;
+  background-color: #98bf21;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px;
+}
+.correct{
+  border: 2px solid green;
+}
+.incorrect{
+  border: 2px solid red;
+}

@@ -1,0 +1,91 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<font style="background-color:rgb(255,255,255)">
+    <p style="color:rgb(0,0,0);font-size:medium;font-family:arial,helvetica">Review questions:</p>
+    <ol>
+        
+        <li style="color:rgb(0,0,0);font-size:medium;font-family:arial,helvetica">When a shopping cart reaches its initial capacity, what happens?</li>
+        <br><i>A new temporary array is created with double the previous size. All previous items are copied over to the temporary array, the old object is recreated with double capacity, and all values are copied from the temporary array to the proper one.</i><br><br>
+        
+        <li style="color:rgb(0,0,0);font-size:medium;font-family:arial,helvetica">Explain in plain English how the data structure "stretches" to accommodate more items if/when it reaches the initial
+            capacity.
+        </li>
+        <br><i>The data structure "stretches" because you must define the data structure with a particular number of spots available. Once you reach the max number of spots occupied, you must stretch the data structure by creating a new data structure with double the old number of spots.</i><br><br>
+        <li style="color:rgb(0,0,0)">
+            <font face="arial, helvetica" style="font-size:medium">If the ShoppingCart constructor was changed in the following manner, what would happen? Briefly explain.</font>
+            <br />
+            <br />
+            <font face="courier new, monospace" size="2">public ShoppingCart() {
+                <br /> capacity = 3;
+                <br /> itemCount = 0;
+                <br /> totalPrice = 0.0;
+                <br /> Item[] cart = new Item[capacity];
+                <br />} </font>
+            <br />
+            <br />
+        </li>
+        <br><i>A new Item object has been created for that particular scope only. The reference "cart" would be useless outside of the constructor. If you previously have defined cart above as it is currently, you would receive an error, because you cannot have two objects of the same type with the same name.</i><br><br>
+        <li style="color:rgb(0,0,0);font-size:medium">
+            <font face="arial, helvetica">Assume that the </font>
+            <strong style="font-family:arial,helvetica">Item </strong>
+            <font face="arial, helvetica">class above implements an interface called "</font>
+            <strong style="font-family:arial,helvetica">Discountable</strong>
+            <font face="arial, helvetica">," which has the method signature </font>
+            <br />
+            <br />
+            <font face="courier new, monospace">public double discount();</font>
+            <font face="arial, helvetica"> // this method tells the amount of discount to give (0.10 means 10% discount)</font>
+            <br />
+            <br />
+            <font face="arial, helvetica">What changes must be made to the item class? Make up a simple logic for the discount method.
+                <br />
+            </font>
+            <br />
+        </li>
+        <br><i>If the item implements an interface named Discountable, then you must implement all methods in the class Discountable. In this case, you must implement a discount method in item. The logic for the method could be that it gives a basic discount based on the price tier of the item. You may want to cap a discount of a certain item. For example, you could give a 50% discount to a $15 item, but you wouldn't do the same to a $100 item. You would check the pricing of the item, you might check the quantity of the item being purchased, to give a bulk discount. </i><br><br>
+        <li style="color:rgb(0,0,0)">
+            <font face="arial, helvetica" style="font-size:medium">Assume that </font>
+            <strong style="font-size:medium;font-family:arial,helvetica">Item </strong>
+            <font face="arial, helvetica" style="font-size:medium">class indeed implements Discountable (a la question 8 above), does the following method compile and run properly?
+                Briefly explain.</font>
+            <br />
+            <br />
+            <font face="courier new, monospace" size="2">public void addToCart(String itemName, double price, int quantity) {
+                <br /> Item anItem = new Item(itemName, price, quantity);
+                <br /> cart[itemCount++] = anItem;
+                <br /> totalPrice += price * (1 - anItem.discount()) * quantity;
+                <br /> if (itemCount == capacity) { increaseSize(); }
+                <br />}</font>
+            <br />
+            <font face="arial, helvetica" style="font-size:medium"> </font>
+        </li>
+        <br><i>It should! If this method is placed in the ShoppingCart class, this should compile no problem. Since Item extends discountable, the discount method should be implemented in that class. It is also a public method, so it is callable by an Item object outside of the Item class.</i><br><br>
+        <li style="color:rgb(0,0,0)">
+            <font face="arial, helvetica" style="font-size:medium">Assume that </font>
+            <strong style="font-size:medium;font-family:arial,helvetica">Item </strong>
+            <font face="arial, helvetica" style="font-size:medium">class indeed implements Discountable (a la question 8 above), does the following statements compile and run properly?
+                Briefly explain.</font>
+            <br />
+            <br />
+            <font face="courier new, monospace" size="2">Discountable item = new Item(itemName, price, quantity);
+                <br />if (item.discount() &gt; 0.20)
+                <br /> System.out.println("...");
+                <br />
+            </font>
+        </li>
+        <br><i>It will. This is because since Item implements Discountable, a provided Item object is just as good as any Discountable object. But, even though an Item object may have additional methods, they cannot be used (because they are not contained in a Discountable object).</i><br><br>
+    </ol>
+    <br />
+</font>
+
+</html>
